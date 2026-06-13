@@ -123,7 +123,10 @@
   }
 
   fetch('assets/world.geojson')
-    .then(function(r) { return r.json(); })
+    .then(function(r) {
+      if (!r.ok) throw new Error('GeoJSON fetch failed: ' + r.status + ' ' + r.url);
+      return r.json();
+    })
     .then(function(gj) {
       var mc = document.createElement('canvas');
       mc.width = MASK_W; mc.height = MASK_H;
