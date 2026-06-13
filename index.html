@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Agence</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- GRID CANVAS -->
+  <canvas id="gridCanvas" aria-hidden="true"></canvas>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <!-- Logo -->
+      <div class="header__logo">
+        <span class="header__logo-text">CARBON.</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="header__nav" aria-label="Navigation principale">
+        <ul class="header__nav-list">
+          <li><a href="#agency" class="header__nav-link" data-i18n="nav.agency">L'Agence</a></li>
+          <li><a href="#services" class="header__nav-link" data-i18n="nav.services">Nos services</a></li>
+          <li><a href="#team" class="header__nav-link" data-i18n="nav.team">Notre équipe</a></li>
+          <li><a href="#faq" class="header__nav-link" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#contact" class="header__nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language switcher -->
+      <div class="header__lang" id="langSwitcher">
+        <button class="lang__current" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang__flag" id="langFlag">FR</span>
+          <svg class="lang__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M3 4.5 L6 7.5 L9 4.5" stroke="#EDEFF5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="lang__dropdown" role="listbox" aria-label="Changer de langue">
+          <li class="lang__option lang__option--active" data-lang="fr" role="option">FR — Français</li>
+          <li class="lang__option" data-lang="en" role="option">EN — English</li>
+          <li class="lang__option" data-lang="es" role="option">ES — Español</li>
+          <li class="lang__option" data-lang="it" role="option">IT — Italiano</li>
+          <li class="lang__option" data-lang="de" role="option">DE — Deutsch</li>
+        </ul>
+      </div>
+
+    </header>
+
+    <!-- HERO CONTENT -->
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">Studio créatif & digital</p>
+      <h1 class="hero__title" data-i18n="hero.title">
+        Nous transformons<br />vos idées en&nbsp;<span class="hero__accent">réalités</span>.
+      </h1>
+      <p class="hero__sub" data-i18n="hero.sub">
+        Stratégie, design et développement pour des marques qui veulent marquer les esprits.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="hero__cta" data-i18n="hero.cta">Démarrer un projet</a>
+        <a href="#work" class="hero__cta-secondary" data-i18n="hero.work">Nos réalisations</a>
+      </div>
+    </div>
+
+    <!-- Background decorative blobs -->
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+    <!-- TRUSTED BY TICKER -->
+    <div class="ticker" aria-label="Ils nous ont fait confiance">
+      <p class="ticker__label">Ils nous ont fait confiance</p>
+      <div class="ticker__track-wrap">
+        <div class="ticker__track">
+          <span class="ticker__item"><img src="assets/logo-airbus.svg"    alt="Airbus"     class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-lvmh.svg"      alt="LVMH"       class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-renault.svg"   alt="Renault"    class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-bnp.svg"       alt="BNP Paribas" class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-chanel.svg"    alt="Chanel"     class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-orange.svg"    alt="Orange"     class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-decathlon.svg" alt="Decathlon"  class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-hermes.svg"    alt="Hermès"     class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-airbus.svg"    alt="Airbus"     class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-lvmh.svg"      alt="LVMH"       class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-renault.svg"   alt="Renault"    class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-bnp.svg"       alt="BNP Paribas" class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-chanel.svg"    alt="Chanel"     class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-orange.svg"    alt="Orange"     class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-decathlon.svg" alt="Decathlon"  class="ticker__logo" /></span>
+          <span class="ticker__item"><img src="assets/logo-hermes.svg"    alt="Hermès"     class="ticker__logo" /></span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- GLOBE SECTION -->
+  <section class="globe-section" id="global">
+    <div class="globe-section__text">
+      <p class="hero__eyebrow" style="margin-bottom:1.5rem;">Présence mondiale</p>
+      <h2 class="globe-section__title">Connectez votre business<br/>à travers le monde</h2>
+      <p class="globe-section__sub">De Paris à Tokyo, de New York à Dubaï — nous activons votre marque là où vos clients se trouvent.</p>
+    </div>
+    <div class="globe-section__canvas-wrap">
+      <canvas id="globeCanvas"></canvas>
+      <div id="globeTooltip" class="globe-tooltip"></div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+  <script src="globe.js"></script>
+</body>
+</html>
